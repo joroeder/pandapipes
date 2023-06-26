@@ -34,11 +34,18 @@ Part II: Simulation with pandapipes
     - Example of exports of the results
     - Plot the results of pandapipes simulation
 
-Requirements:
 
-- dhnx with extra_requires (osmnx, geopandas, CoolProp)
+Requirements:
+- dhnx from the dev branch: https://github.com/oemof/DHNx/tree/dev
+- CoolProp, oemof, geopandas, osmnx, dhnx, Cartopy
 - pandapipes
-- Make sure you have the solver CBC installed
+- Make sure you have installed and selected a solver. The open source solvers available are CBC and glpk: 
+        - CBC binaries can be downloaded at https://github.com/coin-or/Cbc then added to Windows path variables. There is currently no pipy distribution available for Windows.
+        - glpk can be installed via "pip install glpk"
+- To access geodata via the overpass API, you might need to specify your company's Proxys via:
+        os.environ['HTTP_PROXY']="http://..."
+        os.environ['HTTPS_PROXY']="..."
+
 
 Contributors:
 
